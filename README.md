@@ -1,6 +1,6 @@
 # flutter_redux_login
 
-A new Flutter project.
+This project focuses on implementing a login page using Redux for state management 
 
 ## Getting Started
 
