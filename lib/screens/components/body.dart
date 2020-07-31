@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux_login/components/rounded_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import "../../constants.dart";
+import '../../utils/constants.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -18,9 +18,11 @@ class Body extends StatelessWidget {
               style: Theme.of(context).textTheme.headline1),
           SvgPicture.asset(loginImage, height: size.height * 0.45),
           SizedBox(height: 20),
-          BuildButton(press: () {}, text: "Login"),
+          BuildButton(
+              press: () => Navigator.pushNamed(context, "loginPage"),
+              text: "Login"),
           SizedBox(height: 10),
-          BuildButton(press: () {}, text: "Sign up")
+          BuildButton(press: () => Navigator.pushNamed(context, "signUpScreen"), text: "Sign up")
         ],
       ),
     );

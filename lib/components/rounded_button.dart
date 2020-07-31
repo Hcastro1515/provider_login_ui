@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../constants.dart';
+import '../utils/constants.dart';
 
 class BuildButton extends StatelessWidget {
   final String text;
