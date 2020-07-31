@@ -5,9 +5,11 @@ class BuildButton extends StatelessWidget {
   final String text;
   final Function press;
   final Color color, textColor;
+  final bool addShadow;
 
   const BuildButton({
     Key key,
+    this.addShadow,
     this.text,
     this.press,
     this.color = hPrimrayColor,
@@ -18,6 +20,15 @@ class BuildButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
+      decoration: BoxDecoration(
+          boxShadow: addShadow == true
+              ? [
+                  BoxShadow(
+                      offset: Offset(0, 10),
+                      color: Colors.grey.withOpacity(0.9),
+                      blurRadius: 50)
+                ]
+              : null),
       width: size.width * 0.9,
       height: 60,
       child: ClipRRect(
