@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_redux_login/screens/sign_up_screen.dart';
 import 'package:flutter_redux_login/screens/splash_screen.dart';
+import 'package:flutter_redux_login/utils/constants.dart';
 
 import 'screens/login_screen.dart';
 import 'screens/splash_screen.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
       theme: ThemeData(
+        primaryColor: hPrimrayColor,
           scaffoldBackgroundColor: Colors.white,
           textTheme: TextTheme(
               headline1: TextStyle(
