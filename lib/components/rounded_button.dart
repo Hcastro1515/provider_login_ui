@@ -6,6 +6,7 @@ class BuildButton extends StatelessWidget {
   final Function press;
   final Color color, textColor;
   final bool addShadow;
+  final double height; 
 
   const BuildButton({
     Key key,
@@ -13,7 +14,7 @@ class BuildButton extends StatelessWidget {
     this.text,
     this.press,
     this.color = hPrimrayColor,
-    this.textColor = Colors.white,
+    this.textColor = Colors.white, this.height,
   }) : super(key: key);
 
   @override
@@ -30,7 +31,7 @@ class BuildButton extends StatelessWidget {
                 ]
               : null),
       width: size.width * 0.9,
-      height: 60,
+      height: height,
       child: ClipRRect(
           borderRadius: BorderRadius.circular(30),
           child: FlatButton(
