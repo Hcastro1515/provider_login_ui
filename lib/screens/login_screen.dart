@@ -32,7 +32,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   SvgPicture.asset(
                     loginImage,
-                    height: size.height * .45,
+                    height: size.height * .30,
                   ),
                   _customContainer(context, size),
                 ]),
