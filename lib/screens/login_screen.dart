@@ -49,46 +49,13 @@ Widget _customContainer(BuildContext context, Size size) => Container(
           horizontal: 25.0,
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
-                child: Column(
-              children: <Widget>[
-                CustomTextField(
-                  hintText: "Email or Username",
-                  autoFocusValue: false,
-                  icon: Icon(
-                    Icons.email,
-                    color: Theme.of(context).primaryColor,
-                    size: 20,
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                CustomTextField(
-                  hintText: "Password",
-                  autoFocusValue: false,
-                  obscureState: true,
-                  icon: Icon(
-                    Icons.lock,
-                    color: Theme.of(context).primaryColor,
-                    size: 20,
-                  ),
-                ),
-                _buildForgotPassword(),
-              ],
-            )),
+            _textFieldContainer(context),
+            SizedBox(height: size.height * .02),
             _buildThirdLogingParty(),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: BuildButton(
-                color: hPrimrayColor,
-                height: 40,
-                text: "Login",
-                press: () => print("tapped"),
-              ),
-            )
+            SizedBox(height: size.height * .02),
+            _buttonContainer()
           ],
         ),
       ),
@@ -104,6 +71,49 @@ Widget _customContainer(BuildContext context, Size size) => Container(
                 offset: Offset(0, 10))
           ]),
     );
+
+Widget _buttonContainer() {
+  return Padding(
+    padding: const EdgeInsets.symmetric(vertical: 20),
+    child: BuildButton(
+      color: hPrimrayColor,
+      height: 40,
+      text: "Login",
+      press: () => print("tapped"),
+    ),
+  );
+}
+
+Widget _textFieldContainer(BuildContext context) {
+  return Container(
+      child: Column(
+    children: <Widget>[
+      CustomTextField(
+        hintText: "Email or Username",
+        autoFocusValue: false,
+        icon: Icon(
+          Icons.email,
+          color: Theme.of(context).primaryColor,
+          size: 20,
+        ),
+      ),
+      SizedBox(
+        height: 20,
+      ),
+      CustomTextField(
+        hintText: "Password",
+        autoFocusValue: false,
+        obscureState: true,
+        icon: Icon(
+          Icons.lock,
+          color: Theme.of(context).primaryColor,
+          size: 20,
+        ),
+      ),
+      _buildForgotPassword(),
+    ],
+  ));
+}
 
 Widget _buildForgotPassword() {
   return Padding(
