@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "208664530249",
+    "firebase_url": "https://provider-login-ui.firebaseio.com",
+    "project_id": "provider-login-ui",
+    "storage_bucket": "provider-login-ui.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208664530249:android:3b645637054fc850ab5e98",
+        "android_client_info": {
+          "package_name": "com.example.flutter_redux_login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208664530249-sv63o5f18l91gcf39aj37p3l19q8rutm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAPRTXgGVUFEic3acnmqjQVEqKkSh8DhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208664530249-sv63o5f18l91gcf39aj37p3l19q8rutm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
