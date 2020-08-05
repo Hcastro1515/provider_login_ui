@@ -1,6 +1,6 @@
-# flutter_redux_login
+# provider_login_ui
 
-This project focuses on implementing a login page using Redux for state management 
+This project focuses on implementing a login page using Provider for state management 
 
 ## Getting Started
 
